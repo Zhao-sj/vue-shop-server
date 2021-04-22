@@ -1,0 +1,26 @@
+添加环境变量
+安装数据库
+	mysqld -install
+
+初始化数据库
+	mysqld --initialize
+
+数据库初始化之后会自动新增一个data文件夹
+在data文件夹中包含一个'.err'文件，文件名是以电脑用户名命名
+在'.err'文件中第二排 for root@localhost: 后是初始密码 1XeR:h:Iy,IE
+
+部署配置文件:my.ini	
+[mysqld]
+port=3306
+basedir=当前数据库所在目录路径
+datadir=当前数据库所在目录的data路径
+
+启动服务
+	net start mysql
+		注:以管理员的身份运行cmd
+
+登录数据库
+	mysql -uroot -p
+
+修改密码
+	set password='root
